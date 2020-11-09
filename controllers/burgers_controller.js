@@ -6,7 +6,7 @@ router.get("/", function(req, res){
     res.redirect("/burgers");
 });
 
-router.get("/", function (req, res){
+router.get("/burgers", function (req, res){
     //express callback response by calling 
     burger.all(function(data){
         // const hbsObject = {
