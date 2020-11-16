@@ -25,7 +25,7 @@ router.post("/burgers/create", function(req, res){
 });
 
 router.put("/burgers/:id", function(req, res){
-  burger.update("burger_id", [req.params.id], function(result) {
+  burger.update(req.body, "id = " + req.params.id, function(result) {
       console.log(result);
       res.sendStatus(200);
   });
